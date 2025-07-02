@@ -21,8 +21,8 @@ function getCompanyIntro(){
 		ic_html +=		`
 										<div class="box">
 											<p>`+data.title+`</p>
-											<a href=".`+data.url+`" target="_blank">
-												<img src="`+data.icon+`" alt="`+data.title+` Icon" title="`+data.url+`"/>
+											<a href="`+data.url+`" target="_blank">
+												<img src=".`+data.icon+`" alt="`+data.title+` Icon" title="`+data.url+`"/>
 											</a>
 										</div>
 									`;
