@@ -1,0 +1,28 @@
+{
+  "title": "Your success is our goal",
+  "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque consequatur, consequuntur cum deserunt, dolore dolorem ea enim hic in natus non provident quas quasi quidem sapiente soluta tenetur vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ducimus nobis quis vel veniam? Asperiores earum ipsum libero modi quo. Dolorum illo obcaecati officiis quisquam repudiandae sint sunt velit vero!</p><p>Beatae consequuntur eligendi ipsam quae veniam. At deserunt harum optio quasi quis recusandae voluptas! Commodi corporis dolore, expedita facere laudantium magnam officiis qui quibusdam quis. Blanditiis debitis dolore ea enim expedita harum impedit molestiae neque rem vitae.</p>",
+  "photo": "https://images.unsplash.com/photo-1631248207065-771ae9ac32f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
+  "serviceTitle": "Our expertise",
+  "services": [
+    {
+      "title": "Concept",
+      "icon": "/images/icons/concept.svg",
+      "url": "https://www.abc.com/sales/concept"
+    },
+    {
+      "title": "Strategy",
+      "icon": "/images/icons/strategy.svg",
+      "url": "https://www.abc.com/sales/strategy"
+    },
+    {
+      "title": "Philosophy",
+      "icon": "/images/icons/philosophy.svg",
+      "url": "https://www.abc.com/sales/philosophy"
+    },
+    {
+      "title": "Guarantee",
+      "icon": "/images/icons/guarantee.svg",
+      "url": "https://www.abc.com/sales/guarantee"
+    }
+]
+}

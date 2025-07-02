@@ -1,0 +1,340 @@
+body {
+  margin: 0;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(56, 55, 55);
+}
+body .intro {
+  background-color: #111;
+  min-height: 350px;
+  height: auto;
+  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+}
+body .employee {
+  background-color: rgb(56, 55, 55);
+  min-height: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .employee h3 {
+  padding: 30px;
+  justify-content: flex-start;
+}
+
+.column1 {
+  padding: 30px;
+  width: 35%;
+  box-sizing: border-box;
+}
+.column1 p {
+  color: gray;
+  font-size: 12px;
+}
+
+.column2 {
+  background-color: #111;
+  padding: 30px;
+  position: relative;
+}
+.column2::before, .column2::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  height: calc(100% - 80px);
+  width: 1px;
+  background-color: rgb(47, 46, 46);
+}
+.column2::before {
+  left: 0;
+}
+.column2::after {
+  right: 0;
+}
+.column2 h3 {
+  text-align: center;
+}
+.column2 .expertise-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.column2 .expertise-grid .box {
+  text-align: center;
+}
+.column2 .expertise-grid .box img {
+  width: 50px;
+  filter: invert(100%);
+  margin-top: 15px;
+}
+.column2 .expertise-grid .box p {
+  margin: 0;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  text-underline-offset: 10px;
+}
+
+.column3 {
+  padding-top: 60px;
+  padding-left: 20px;
+  width: 25%;
+}
+.column3 img {
+  width: 100%;
+  height: 80%;
+  aspect-ratio: 4/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 0;
+}
+.team-grid .card {
+  background-color: white;
+  height: auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.team-grid .card img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.team-grid .card .designation,
+.team-grid .card .name {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px 0px 0px 25px;
+  font-size: small;
+}
+.team-grid .card .designation {
+  color: grey;
+}
+.team-grid .card .name {
+  color: #111;
+  font-weight: 600;
+  padding-top: 3px !important;
+  padding-bottom: 10px;
+}
+.team-grid .card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.team-grid .card .overlay .outer-border {
+  border: 5px solid black;
+  margin: 10px;
+  padding: 10px;
+  height: 90%;
+  width: 90%;
+}
+.team-grid .card:hover .overlay {
+  opacity: 1;
+}
+
+.inner-border {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  border: none;
+  min-height: 340px;
+}
+.inner-border::before, .inner-border::after {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  pointer-events: none;
+}
+.inner-border::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid orangered;
+  border-left: 2px solid orangered;
+  width: 20px;
+  height: 20px;
+}
+.inner-border::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid orangered;
+  border-right: 2px solid orangered;
+  width: 20px;
+  height: 20px;
+}
+.inner-border .contact {
+  padding: 50px 0 0 0;
+  color: gray;
+}
+.inner-border .contact .label {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.inner-border .contact .contact-name {
+  color: orangered;
+  font-size: 15px;
+  font-weight: 600;
+}
+.inner-border .contact .position {
+  font-size: 10px;
+  padding-top: 5px;
+}
+.inner-border .details {
+  padding: 40px 0px 5px 0px;
+  font-size: 10px;
+}
+.inner-border .details a {
+  text-decoration: none;
+  color: inherit;
+}
+.inner-border .details i {
+  padding-right: 5px;
+}
+.inner-border .details .details-row {
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .column3 {
+    order: 1;
+    width: 100% !important;
+    height: auto !important;
+    padding: 15px;
+    display: block !important;
+  }
+  .column3 img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .column1 {
+    order: 2;
+    width: 100%;
+    padding: 15px;
+    background-color: #111;
+  }
+  .column2 {
+    order: 3;
+    width: 100%;
+    padding: 15px;
+  }
+  .employee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px !important;
+  }
+  .employee .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 0;
+  }
+  .inner-border {
+    width: auto;
+    min-height: 245px;
+  }
+  .inner-border .contact {
+    padding: 50px 0px 0 0 !important;
+    width: 100%;
+  }
+  .inner-border .details {
+    padding: 10px 0px 5px 0px !important;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .column2,
+  .column3 {
+    width: 50%;
+  }
+  .column1 {
+    order: 1;
+    width: 100%;
+    padding: 20px;
+  }
+  .column2 {
+    order: 2;
+    margin-right: -10px;
+    width: 30%;
+    padding-left: 0px !important;
+  }
+  .column2::before, .column2::after {
+    display: none;
+  }
+  .column3 {
+    order: 3;
+    padding-top: 50px;
+    width: 30%;
+  }
+  .column3 img {
+    width: 100%;
+    height: 90%;
+    aspect-ratio: 4/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+  .employee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .employee .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

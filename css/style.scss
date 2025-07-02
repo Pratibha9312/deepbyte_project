@@ -1,0 +1,408 @@
+$bg-dark: #111;
+$text-white: #fff;
+$gap: 30px;
+$icon-size: 50px;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-laptop: 1440px;
+
+body{
+	margin:0;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(56, 55, 55);
+
+	.intro{
+		background-color: $bg-dark;
+		min-height: 350px; // ensures enough room
+  		height: auto; 
+		padding-top: 1px; 
+		display: flex;
+		justify-content: center;
+	}
+
+	.employee{
+		background-color: rgb(56, 55, 55);
+		min-height: 350px;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h3{
+			padding: $gap;
+			justify-content: flex-start;
+		}
+	}
+}
+
+.column1{
+	padding: $gap;
+	width: 35%;
+    box-sizing: border-box;
+	// flex: 1;
+
+	p{
+		color: gray;
+		font-size: 12px;
+	}
+}
+
+.column2 {
+    background-color: $bg-dark;
+	padding: $gap;
+	position: relative;
+
+  	&::before,
+ 	&::after  {
+    content: "";
+    position: absolute;
+    top: 40px; 
+    height: calc(100% - 80px); 
+    width: 1px;
+    background-color: rgb(47, 46, 46);
+  	}
+
+	&::before {
+		left: 0; 
+	}
+
+	&::after {
+		right: 0; 
+	}
+
+    h3 {
+      text-align: center;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+
+      .box {
+        text-align: center;
+
+        img {
+          width: $icon-size;
+          filter: invert(100%);
+          margin-top: 15px;
+        }
+
+        p {
+          margin: 0;
+          font-weight: bold;
+		  text-decoration: underline;
+		  text-decoration-color: orangered;
+		  text-underline-offset: 10px;
+        }
+      }
+    }
+}
+
+.column3 {
+    padding-top: 60px;
+	padding-left: 20px;
+	width: 25%;
+
+    img {
+      width: 100%;
+      height: 80%;
+	  aspect-ratio: 4/4;
+      object-fit: cover;
+	  align-items: center;
+	  display: flex;
+	  justify-content: center;
+    }
+}
+
+.team-grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center; 
+	gap: 0;
+
+	.card{
+		background-color: white;
+		height: auto;
+		width: 90%;
+		display: flex;
+		justify-content: center; 
+		align-items: center;     
+		flex-direction: column; 
+		margin-bottom: 20px;
+		position: relative;
+		overflow: hidden;
+	
+		img {
+		width: 90%;
+		height: 90%;
+		object-fit: cover;
+		align-items: center;
+		display: flex;
+		// display: block;
+		justify-content: center;
+		padding-top: 10px;
+		}
+
+		.designation,
+		.name{
+			display: flex;
+			width: 100%;
+			justify-content:flex-start;
+			padding: 10px 0px 0px 25px ;
+			font-size: small;
+		}
+
+		.designation{
+			color: grey;
+		}
+
+		.name{
+			color: #111;
+			font-weight: 600;
+			padding-top: 3px !important;
+			padding-bottom: 10px;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.8);
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			font-size: 18px;
+			 backdrop-filter: blur(5px);  
+
+			.outer-border{
+				border: 5px solid black;
+				margin: 10px;
+				padding: 10px;
+				height: 90%;
+				width: 90%;
+			}
+		}
+
+		&:hover {
+			.overlay {
+			opacity: 1;
+			}
+		}
+	}
+}
+
+.inner-border {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  border: none;
+  min-height: 340px;
+
+  // Create the corner borders using pseudo-elements
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+	height: 90%;
+	width: 90%;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid orangered;
+    border-left: 2px solid orangered;
+    width: 20px;
+    height: 20px;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid orangered;
+    border-right: 2px solid orangered;
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact{
+	padding: 50px 0 0 0;
+	color: gray;
+
+	.label{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+	.contact-name{
+		color: orangered;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	.position{
+		font-size: 10px;
+		padding-top: 5px;
+	}
+  }
+
+  .details{
+	padding: 40px 0px 5px 0px;
+	font-size: 10px;
+
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+
+	i{
+		padding-right: 5px;
+	}
+
+	.details-row{
+		padding: 5px;
+	}
+  }
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+  }
+
+   .column3 {
+    order: 1;
+    width: 100% !important;
+    height: auto !important;
+    padding: 15px;
+    display: block !important; // In case it was set to `none` elsewhere
+  }
+
+  .column3 img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .column1 {
+    order: 2;
+    width: 100%;
+    padding: 15px;
+	background-color: $bg-dark;
+  }
+
+  .column2 {
+    order: 3;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .employee{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+	padding: 0px !important;
+
+	.team-grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center; 
+		gap: 0;
+
+	}
+  }
+
+  .inner-border {
+	width: auto;
+	min-height: 245px;
+		.contact {
+			padding: 50px 0px 0 0 !important;
+			width: 100%;
+		}
+		.details{
+			padding: 10px 0px 5px 0px !important;
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro {
+    display: flex;
+	flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+    .column2,
+	.column3 {
+		width: 50%;
+	}
+
+  .column1 {
+    order: 1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .column2 {
+    order: 2;
+	margin-right: -10px; 
+    width: 30%;
+    padding-left: 0px !important;
+
+	&::before,
+	&::after
+	 {
+     display: none;
+	}
+  }
+
+  .column3 {
+    order: 3;
+	padding-top: 50px;
+    width: 30%;
+    // padding: 20px;
+
+    img {
+      width: 100%;
+      height: 90%;
+	  aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .employee{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+
+	.team-grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center; 
+		gap: 0;
+	}
+  }
+
+  
+}
+
+	
